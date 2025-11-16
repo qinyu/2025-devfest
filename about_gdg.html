@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Workshop - 关于GDG</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .mdc-top-app-bar {
+            background-color: #6200ee;
+        }
+        .mdc-top-app-bar__title {
+            color: white;
+        }
+        .mdc-top-app-bar__navigation-icon, .mdc-top-app-bar__action-item {
+            color: white;
+        }
+        .main-content {
+            padding: 24px;
+            padding-top: 64px; /* Add padding to account for the fixed top app bar */
+            max-width: 800px;
+            margin: auto;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 600px) {
+            .mdc-top-app-bar__section--align-end {
+                display: none;
+            }
+            .mdc-top-app-bar__row::after {
+                content: 'menu';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="mdc-typography">
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title">DevFest Workshop</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about_gdg.html" class="nav-link">关于GDG</a>
+                <a href="about_mcp.html" class="nav-link">关于MCP</a>
+                <a href="about_me.html" class="nav-link">关于我</a>
+            </section>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="mdc-typography--headline4" style="margin-top: 24px;">关于 GDG 和 DevFest</h1>
+        
+        <div class="mdc-card" style="margin-top: 24px; padding: 16px;">
+            <h2 class="mdc-typography--headline6">Google 开发者社区 (GDG)</h2>
+            <p class="mdc-typography--body1" style="margin-top: 16px; line-height: 1.7;">
+                Google 开发者社区 (Google Developer Groups, GDG) 是由对 Google 技术充满热情的开发者组成的本地社区。无论你是初学者还是资深专家，都可以在这里学习、分享和交流。GDG 是一个开放、包容的平台，我们鼓励成员之间互相学习，共同成长。全球有成百上千个 GDG 社区，定期举办各种形式的活动，如技术讲座、代码实验、编程马拉松等。
+            </p>
+        </div>
+
+        <div class="mdc-card" style="margin-top: 24px; padding: 16px;">
+            <h2 class="mdc-typography--headline6">DevFest</h2>
+            <p class="mdc-typography--body1" style="margin-top: 16px; line-height: 1.7;">
+                DevFest (Developers Festival) 是由全球各地 GDG 社区主办的年度技术盛会。它通常在每年的下半年举行，是 Google 开发者社区规模最大、最集中的活动。DevFest 的内容涵盖了 Google 的各种最新技术，包括 Android, Chrome, Google Cloud, AI/ML 等。活动形式多样，既有深度技术演讲，也有动手实践的 Workshop，旨在为广大开发者带来一场技术的饕餮盛宴。
+            </p>
+        </div>
+    </main>
+
+    <script>
+        mdc.autoInit();
+    </script>
+
+</body>
+</html>

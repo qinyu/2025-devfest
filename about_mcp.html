@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Workshop - 关于MCP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .mdc-top-app-bar {
+            background-color: #6200ee;
+        }
+        .mdc-top-app-bar__title {
+            color: white;
+        }
+        .mdc-top-app-bar__navigation-icon, .mdc-top-app-bar__action-item {
+            color: white;
+        }
+        .main-content {
+            padding: 24px;
+            padding-top: 64px; /* Add padding to account for the fixed top app bar */
+            max-width: 800px;
+            margin: auto;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @media (max-width: 600px) {
+            .mdc-top-app-bar__section--align-end {
+                display: none;
+            }
+            .mdc-top-app-bar__row::after {
+                content: 'menu';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="mdc-typography">
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title">DevFest Workshop</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about_gdg.html" class="nav-link">关于GDG</a>
+                <a href="about_mcp.html" class="nav-link">关于MCP</a>
+                <a href="about_me.html" class="nav-link">关于我</a>
+            </section>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="mdc-typography--headline4" style="margin-top: 24px;">关于 Chrome DevTools MCP Server</h1>
+        
+        <div class="mdc-card" style="margin-top: 24px; padding: 16px;">
+            <h2 class="mdc-typography--headline6">什么是 DevTools？</h2>
+            <p class="mdc-typography--body1" style="margin-top: 16px; line-height: 1.7;">
+                Chrome 开发者工具 (Chrome DevTools) 是一套内嵌于 Google Chrome 浏览器的网页开发和调试工具。通过它，开发者可以深入地审查和调试网页的 HTML、CSS 和 JavaScript，分析网络请求，评估页面性能，从而极大地提升开发效率和应用质量。
+            </p>
+        </div>
+
+        <div class="mdc-card" style="margin-top: 24px; padding: 16px;">
+            <h2 class="mdc-typography--headline6">MCP Server 是什么？</h2>
+            <p class="mdc-typography--body1" style="margin-top: 16px; line-height: 1.7;">
+                MCP (Multi-Client Proxy) Server 是一个代理服务器，它允许多个开发者工具客户端同时连接到一个调试目标（例如一个 Node.js 进程或一个浏览器标签页）。在标准模式下，一个调试目标通常只能连接一个 DevTools 客户端。MCP 打破了这一限制。
+            </p>
+            <h3 class="mdc-typography--subtitle1" style="margin-top: 24px;">核心优势：</h3>
+            <ul class="mdc-list">
+                <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">团队协作</span>
+                        <span class="mdc-list-item__secondary-text">多名开发者可以同时调试同一个应用，实时查看和修改状态。</span>
+                    </span>
+                </li>
+                <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">自动化与调试结合</span>
+                        <span class="mdc-list-item__secondary-text">一个客户端可以运行自动化测试脚本，而另一个客户端可以用于人工实时观察和调试。</span>
+                    </span>
+                </li>
+                <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">远程调试</span>
+                        <span class="mdc-list-item__secondary-text">简化了远程调试的设置，允许多个远程客户端连接。</span>
+                    </span>
+                </li>
+            </ul>
+            <p class="mdc-typography--body1" style="margin-top: 16px; line-height: 1.7;">
+                通过本次 Workshop，我们将学习如何搭建和使用 MCP Server，解锁更高级的调试技巧。
+            </p>
+        </div>
+    </main>
+
+    <script>
+        mdc.autoInit();
+    </script>
+
+</body>
+</html>

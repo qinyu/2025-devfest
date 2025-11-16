@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Workshop - 首页</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .mdc-top-app-bar {
+            background-color: #6200ee;
+        }
+        .mdc-top-app-bar__title {
+            color: white;
+        }
+        .mdc-top-app-bar__navigation-icon, .mdc-top-app-bar__action-item {
+            color: white;
+        }
+        .main-content {
+            padding: 24px;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 48px 24px;
+            background-color: #f3e5f5;
+        }
+        .hero-section .mdc-typography--headline4 {
+            color: #333;
+        }
+        .hero-section .mdc-typography--body1 {
+            margin-top: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        .custom-card {
+            width: 100%;
+            max-width: 300px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .card-icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-icon-container .material-icons {
+            font-size: 72px; /* Adjust size as needed */
+            color: #6200ee; /* Adjust color as needed */
+        }
+        @media (max-width: 600px) {
+            .mdc-top-app-bar__section--align-end {
+                display: none;
+            }
+            .mdc-top-app-bar__row::after {
+                content: 'menu';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="mdc-typography">
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title">DevFest Workshop</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about_gdg.html" class="nav-link">关于GDG</a>
+                <a href="about_mcp.html" class="nav-link">关于MCP</a>
+                <a href="about_me.html" class="nav-link">关于我</a>
+            </section>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="mdc-typography--headline4">Chrome DevTools MCP Server Workshop</h1>
+            <p class="mdc-typography--body1">
+                欢迎参加本次 DevFest 活动！在这里，我们一同探索 Chrome 开发者工具的强大功能，并深入学习如何利用 MCP (Multi-Client Proxy) Server 提升我们的调试效率和协作能力。
+            </p>
+        </div>
+
+        <div class="card-container">
+            <div class="mdc-card custom-card">
+                <div class="mdc-card__primary-action" onclick="location.href='about_gdg.html'">
+                    <div class="mdc-card__media mdc-card__media--16-9 card-icon-container" style="background-color: #e3f2fd;">
+                        <i class="material-icons">groups</i>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h2 class="mdc-typography mdc-typography--headline6">关于 GDG & DevFest</h2>
+                        <p class="mdc-typography mdc-typography--body2">了解 Google 开发者社区和年度技术盛会 DevFest。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdc-card custom-card">
+                <div class="mdc-card__primary-action" onclick="location.href='about_mcp.html'">
+                    <div class="mdc-card__media mdc-card__media--16-9 card-icon-container" style="background-color: #e8f5e9;">
+                        <i class="material-icons">developer_mode</i>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h2 class="mdc-typography mdc-typography--headline6">关于 DevTools MCP</h2>
+                        <p class="mdc-typography mdc-typography--body2">深入了解本次 Workshop 的核心主题：DevTools MCP Server。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdc-card custom-card">
+                <div class="mdc-card__primary-action" onclick="location.href='about_me.html'">
+                    <div class="mdc-card__media mdc-card__media--16-9 card-icon-container" style="background-color: #f3e5f5;">
+                        <i class="material-icons">code</i>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h2 class="mdc-typography mdc-typography--headline6">关于我</h2>
+                        <p class="mdc-typography mdc-typography--body2">认识一下本次活动的参与者：qinyu。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        mdc.autoInit();
+    </script>
+
+</body>
+</html>

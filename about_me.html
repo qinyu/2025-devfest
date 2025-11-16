@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Workshop - 关于我</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .mdc-top-app-bar {
+            background-color: #6200ee;
+        }
+        .mdc-top-app-bar__title {
+            color: white;
+        }
+        .mdc-top-app-bar__navigation-icon, .mdc-top-app-bar__action-item {
+            color: white;
+        }
+        .main-content {
+            padding: 24px;
+            padding-top: 64px; /* Add padding to account for the fixed top app bar */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 0; /* Remove margin-top as padding-top now handles spacing */
+        }
+        .profile-card {
+            width: 100%;
+            max-width: 500px;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 24px;
+        }
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #9575cd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 40px;
+            margin-right: 24px;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-details {
+            padding: 0 24px 24px 24px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255,255, 0.1);
+        }
+        @media (max-width: 600px) {
+            .mdc-top-app-bar__section--align-end {
+                display: none;
+            }
+            .mdc-top-app-bar__row::after {
+                content: 'menu';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+                padding-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="mdc-typography">
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title">DevFest Workshop</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about_gdg.html" class="nav-link">关于GDG</a>
+                <a href="about_mcp.html" class="nav-link">关于MCP</a>
+                <a href="about_me.html" class="nav-link">关于我</a>
+            </section>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="mdc-card profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">Q</div>
+                <div class="profile-info">
+                    <h1 class="mdc-typography--headline5">qinyu</h1>
+                    <p class="mdc-typography--subtitle1" style="color: #555;">开发者</p>
+                </div>
+            </div>
+            <div class="mdc-list-divider"></div>
+            <div class="profile-details">
+                <h2 class="mdc-typography--headline6" style="margin-top: 24px;">个人简介</h2>
+                <p class="mdc-typography--body1" style="margin-top: 16px;">
+                    我是一名热情的开发者，专注于探索和应用新技术。我特别喜欢使用 AI 来辅助编程、优化工作流，并相信它能极大地提升开发效率和创造力。
+                </p>
+                
+                <h2 class="mdc-typography--headline6" style="margin-top: 32px;">联系方式</h2>
+                <div style="display: flex; align-items: center; margin-top: 16px;">
+                    <i class="material-icons" style="color: #6200ee; margin-right: 16px;">email</i>
+                    <a href="mailto:qinyusuain@gmail.com" class="mdc-typography--body1" style="text-decoration: none; color: #6200ee;">qinyusuain@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        mdc.autoInit();
+    </script>
+
+</body>
+</html>
